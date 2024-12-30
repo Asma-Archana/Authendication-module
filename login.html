@@ -1,0 +1,63 @@
+
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <!-- FontAwesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="login-email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="login-password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+            <p><a href="#" id="forgot-password">Forgot Password?</a></p>
+        </form>
+        <div class="social-login">
+            <p>Or login with </p>
+            <!-- Google Login -->
+            <button class="btn google-login" onclick="googleLogin()">
+                <img src="google.png" alt="Google Logo">
+                Login with Google
+            </button>
+            <!-- Facebook Login -->
+            <button class="btn facebook-login" onclick="facebookLogin()">
+                <img src="facebook.jpeg" alt="Facebook Logo" height="10px" width="10px">
+                Login with Facebook
+            </button>
+        </div>
+        <p>Don't have an account? <a href="register.html">Register</a></p>
+    </div>
+
+
+    <!-- Forgot Password Modal -->
+    <div id="forgot-password-modal" class="modal">
+        <div class="modal-content">
+            <h3>Forgot Password</h3>
+            <form id="forgotPasswordForm">
+                <div class="form-group">
+                    <label for="reset-email">Enter your registered email</label>
+                    <input type="email" id="reset-email" placeholder="Enter your email" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Reset Code</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
